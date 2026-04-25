@@ -7,41 +7,58 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <h2>My Portfolio</h2>
-      <ul>
-        <li><a href="#about">소개</a></li>
-        <li><a href="#team">팀 프로젝트</a></li>
-        <li><a href="#contact">연락</a></li>
-      </ul>
-    </nav>
+    <header class="topbar">
+      <h2>Kwon Doyeong Portfolio</h2>
+    </header>
 
-    <section id="about">
-      <h1>안녕하세요, 권도영입니다</h1>
-      <p>정보보호학전공 2학년입니다.</p>
+    <div class="container">
+      <!-- 왼쪽 메인 -->
+      <div class="main">
+        <h1>안녕하세요, <span>권도영</span>입니다</h1>
+        <p>정보보호학전공 2학년입니다.</p>
 
-      <h3>GitHub</h3>
-      <a href="https://github.com/kwondo0" target="_blank">GitHub 바로가기</a>
+        <div class="buttons">
+          <a href="https://github.com/your-id" target="_blank">GitHub</a>
+          <a href="#">블로그</a>
+        </div>
 
-      <h3>블로그</h3>
-      <a href="https://blog.naver.com/kwondo0-">블로그 링크</a>
-    </section>
+        <section id="about">
+          <h2>소개</h2>
+          <p>소프트웨어 개발자를 목표로 공부 중입니다.</p>
+        </section>
 
-    <section id="team">
-      <h2>팀 프로젝트</h2>
+        <section id="team">
+          <h2>팀 프로젝트</h2>
+          <p>팀원들과 협업한 프로젝트</p>
+        </section>
 
-      <div class="card">
-        <h3>프로젝트 이름</h3>
-        <p>팀원들과 협업하여 만든 프로젝트</p>
-        <a href="#">배포 링크</a>
+        <section id="contact">
+          <h2>연락</h2>
+          <p>Email: example@email.com</p>
+        </section>
       </div>
-    </section>
 
-    <!-- 연락 -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: example@email.com</p>
-    </section>
-    <script src="script.js"></script>
+      <!-- 오른쪽 사이드 -->
+      <div class="sidebar">
+        <h2>권도영</h2>
+
+        <ul class="menu">
+          <li><a href="#about">소개</a></li>
+          <li><a href="#team">팀 프로젝트</a></li>
+          <li><a href="#contact">연락</a></li>
+        </ul>
+
+        <div class="links">
+          <h3>링크</h3>
+          <a href="https://github.com/your-id" target="_blank">GitHub</a>
+          <a href="#">블로그</a>
+        </div>
+
+        <div class="contact">
+          <h3>연락처</h3>
+          <p>email@email.com</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
