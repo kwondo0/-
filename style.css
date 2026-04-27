@@ -37,7 +37,7 @@ body {
   top: 60px;
   height: calc(100vh - 60px);
 }
-/* 왼쪽 */
+
 .main {
   width: 70%;
   padding: 50px;
@@ -57,13 +57,11 @@ body {
   border-radius: 5px;
 }
 
-/* 섹션 */
 section {
   margin-top: 80px;
   min-height: 100vh;
 }
 
-/* 오른쪽 사이드바 */
 .sidebar {
   width: 30%;
   background: #111;
@@ -106,7 +104,6 @@ section {
   margin-top: 40px;
 }
 
-/* 반응형 */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
