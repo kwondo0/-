@@ -33,10 +33,6 @@ window.addEventListener('scroll', () => {
   })
 })
 
-window.onload = () => {
-  alert('안녕하세요! 권도영의 포트폴리오입니다.')
-}
-
 const topBtn = document.getElementById('topBtn')
 
 topBtn.addEventListener('click', () => {
@@ -44,4 +40,30 @@ topBtn.addEventListener('click', () => {
     top: 0,
     behavior: 'smooth',
   })
+})
+
+const text = '안녕하세요, 권도영입니다.'
+let index = 0
+
+function typing() {
+  if (index < text.length) {
+    document.getElementById('typing').innerHTML += text.charAt(index)
+    index++
+    setTimeout(typing, 100)
+  }
+}
+
+typing()
+
+window.addEventListener('scroll', () => {
+  const scroll =
+    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+
+  document.getElementById('progress').style.width = scroll + '%'
+})
+
+const darkBtn = document.getElementById('darkModeBtn')
+
+darkBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark')
 })

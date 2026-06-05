@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="progress"></div>
+
     <header class="topbar">
       <h2>Kwon Doyeong Portfolio</h2>
+      <button id="darkModeBtn">🌙</button>
     </header>
 
     <div class="container">
       <div class="main">
-        <h1>안녕하세요, <span>권도영</span>입니다</h1>
+        <h1 id="typing"></h1>
         <p>정보보호학전공 2학년입니다.</p>
 
         <div class="buttons">
@@ -26,19 +29,78 @@
           <p>소프트웨어 개발자를 목표로 공부 중입니다.</p>
         </section>
 
+        <section id="skills" class="fade">
+          <h2>기술 스택</h2>
+
+          <div class="skill">
+            <p>HTML</p>
+            <div class="bar">
+              <span style="width: 90%"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <p>CSS</p>
+            <div class="bar">
+              <span style="width: 80%"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <p>JavaScript</p>
+            <div class="bar">
+              <span style="width: 70%"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <p>Python</p>
+            <div class="bar">
+              <span style="width: 65%"></span>
+            </div>
+          </div>
+        </section>
+
         <section id="projects" class="fade">
           <h2>프로젝트</h2>
-          <p>개인 및 팀 프로젝트</p>
-        </section>
 
-        <section id="team" class="fade">
-          <h2>팀 프로젝트</h2>
-          <p>팀원들과 협업한 프로젝트</p>
-        </section>
+          <div class="project-card">
+            <h3>개인 포트폴리오 웹사이트</h3>
+            <p>
+              HTML, CSS, JavaScript를 활용하여 제작한 개인 포트폴리오입니다.
+              반응형 웹 디자인과 스크롤 애니메이션을 적용했습니다.
+            </p>
+            <span>HTML · CSS · JavaScript</span>
+            <a
+              href="https://444-lt5t.vercel.app/"
+              target="_blank"
+              class="project-btn"
+            >
+              링크 보기
+            </a>
+          </div>
 
+          <div class="project-card">
+            <h3>TimeSense</h3>
+            <p>
+              사용자가 시간의 흐름을 직관적으로 인지할 수 있도록 도와주는 웹
+              서비스입니다.
+            </p>
+            <span>HTML · CSS · JavaScript</span>
+            <a
+              href="https://team-nine-lake.vercel.app/"
+              target="_blank"
+              class="project-btn"
+            >
+              링크 보기
+            </a>
+          </div>
+        </section>
         <section id="contact" class="fade">
           <h2>연락</h2>
-          <p>Email: example@email.com</p>
+          <p>📧 Email: example@email.com</p>
+          <p>💻 GitHub : github.com/kwondo0</p>
+          <p>📝 Blog : blog.naver.com/kwondo0-</p>
         </section>
       </div>
 
@@ -47,9 +109,8 @@
 
         <ul class="menu">
           <li><a href="#about">소개</a></li>
+          <li><a href="#skills">기술 스택</a></li>
           <li><a href="#projects">프로젝트</a></li>
-          <li><a href="#team">팀 프로젝트</a></li>
-          <li><a href="#contact">연락</a></li>
         </ul>
 
         <div class="links">
