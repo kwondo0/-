@@ -8,102 +8,186 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">Kwon Doyeong</div>
+    <!-- 스크롤 진행률 -->
+    <div id="progressBar"></div>
 
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <!-- 네비게이션 -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Kwon Doyeong</div>
 
-      <button id="darkBtn">🌙</button>
-    </nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
+        <button id="darkModeBtn">🌙</button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
     <section class="hero">
-      <h1 id="typing"></h1>
+      <div class="hero-content">
+        <h1 id="typing"></h1>
 
-      <p>Information Security Student & Web Developer</p>
+        <p class="subtitle">
+          Information Security Student & Front-End Developer
+        </p>
 
-      <div class="hero-buttons">
-        <a href="#projects">프로젝트 보기</a>
+        <p class="description">
+          사용자 경험을 중요하게 생각하며 실생활 문제를 해결하는 웹 서비스를
+          만드는 것을 좋아합니다.
+        </p>
 
-        <a href="https://github.com/kwondo0" target="_blank"> GitHub </a>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary"> 프로젝트 보기 </a>
+
+          <a
+            href="https://github.com/kwondo0"
+            target="_blank"
+            class="btn-secondary"
+          >
+            GitHub
+          </a>
+        </div>
+
+        <div class="hero-info">
+          <div class="info-box">
+            <h3>현재 시간</h3>
+            <p id="clock"></p>
+          </div>
+
+          <div class="info-box">
+            <h3>방문 횟수</h3>
+            <p id="visitCount"></p>
+          </div>
+        </div>
+
+        <div class="quote-box">
+          <p id="quote"></p>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="fade">
+    <!-- ABOUT -->
+    <section id="about" class="section fade">
       <h2>About Me</h2>
 
-      <p>
-        안녕하세요. 정보보호학을 전공하고 있는 권도영입니다. 웹 개발과 사용자
-        경험에 관심이 있으며 실생활의 문제를 해결하는 서비스를 만드는 것을
-        좋아합니다.
-      </p>
+      <div class="about-card">
+        <p>안녕하세요. 정보보호학을 전공하고 있는 권도영입니다.</p>
+
+        <p>
+          웹 개발과 사용자 경험에 관심이 있으며 실생활의 불편함을 해결하는
+          서비스를 직접 기획하고 구현하는 것을 좋아합니다.
+        </p>
+
+        <p>
+          현재 HTML, CSS, JavaScript를 중심으로 프론트엔드 개발 역량을 키우고
+          있습니다.
+        </p>
+      </div>
     </section>
 
-    <section id="skills" class="fade">
+    <!-- SKILLS -->
+    <section id="skills" class="section fade">
       <h2>Skills</h2>
 
       <div class="skills-grid">
-        <div class="skill-card">HTML5</div>
-        <div class="skill-card">CSS3</div>
+        <div class="skill-card">HTML</div>
+
+        <div class="skill-card">CSS</div>
+
         <div class="skill-card">JavaScript</div>
+
         <div class="skill-card">Python</div>
+
         <div class="skill-card">Git</div>
+
         <div class="skill-card">GitHub</div>
+
         <div class="skill-card">Linux</div>
       </div>
     </section>
 
-    <section id="projects" class="fade">
+    <!-- PROJECTS -->
+    <section id="projects" class="section fade">
       <h2>Projects</h2>
 
-      <div class="project-card">
-        <h3>TimeSense</h3>
+      <!-- 필터 버튼 -->
 
-        <p>
-          사용자가 시간의 흐름을 직관적으로 인지할 수 있도록 도와주는
-          서비스입니다.
-        </p>
+      <div class="filter-buttons">
+        <button data-filter="all">전체</button>
 
-        <span>HTML · CSS · JavaScript</span>
+        <button data-filter="web">Web</button>
 
-        <a href="https://team-nine-lake.vercel.app/" class="project-btn">
-          자세히 보기
-        </a>
+        <button data-filter="javascript">JavaScript</button>
       </div>
 
-      <div class="project-card">
+      <!-- 프로젝트 1 -->
+
+      <div class="project-card web javascript" data-project="timesense">
+        <h3>TimeSense</h3>
+
+        <p>시간의 흐름을 직관적으로 인지할 수 있도록 도와주는 웹 서비스</p>
+
+        <span> HTML · CSS · JavaScript </span>
+
+        <button class="detail-btn">상세 보기</button>
+      </div>
+
+      <!-- 프로젝트 2 -->
+
+      <div class="project-card web javascript" data-project="portfolio">
         <h3>Portfolio Website</h3>
 
         <p>
-          프로젝트와 기술 스택을 소개하기 위해 제작한 개인 포트폴리오
-          웹사이트입니다.
+          개인 프로젝트와 기술 스택을 소개하기 위해 제작한 포트폴리오 웹사이트
         </p>
 
-        <span>HTML · CSS · JavaScript</span>
+        <span> HTML · CSS · JavaScript </span>
 
-        <a
-          href="https://444-lt5t.vercel.app/"
-          target="_blank"
-          class="project-btn"
-        >
-          자세히 보기
-        </a>
+        <button class="detail-btn">상세 보기</button>
       </div>
     </section>
 
-    <section id="contact" class="fade">
+    <!-- CONTACT -->
+
+    <section id="contact" class="section fade">
       <h2>Contact</h2>
 
-      <p>📧 이메일 입력</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>본인 이메일 입력</p>
+        </div>
 
-      <p>💻 GitHub : github.com/kwondo0</p>
+        <div class="contact-card">
+          <h3>GitHub</h3>
+          <p>github.com/kwondo0</p>
+        </div>
 
-      <p>📝 Blog : blog.naver.com/kwondo0-</p>
+        <div class="contact-card">
+          <h3>Blog</h3>
+          <p>blog.naver.com/kwondo0-</p>
+        </div>
+      </div>
     </section>
+
+    <!-- 모달 -->
+
+    <div id="projectModal">
+      <div class="modal-content">
+        <span id="closeModal"> &times; </span>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+
+    <!-- 맨 위 버튼 -->
 
     <button id="topBtn">↑</button>
 
