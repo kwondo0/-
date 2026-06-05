@@ -4,128 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>권도영 포트폴리오</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="progress"></div>
+    <nav>
+      <div class="logo">Kwon Doyeong</div>
 
-    <header class="topbar">
-      <h2>Kwon Doyeong Portfolio</h2>
-      <button id="darkModeBtn">🌙</button>
-    </header>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-    <div class="container">
-      <div class="main">
-        <h1 id="typing"></h1>
-        <p>정보보호학전공 2학년입니다.</p>
+      <button id="darkBtn">🌙</button>
+    </nav>
 
-        <div class="buttons">
-          <a href="https://github.com/your-id" target="_blank">GitHub</a>
-          <a href="https://blog.naver.com/kwondo0-">블로그</a>
-        </div>
+    <section class="hero">
+      <h1 id="typing"></h1>
 
-        <section id="about" class="fade">
-          <h2>소개</h2>
-          <p>소프트웨어 개발자를 목표로 공부 중입니다.</p>
-        </section>
+      <p>Information Security Student & Web Developer</p>
 
-        <section id="skills" class="fade">
-          <h2>기술 스택</h2>
+      <div class="hero-buttons">
+        <a href="#projects">프로젝트 보기</a>
 
-          <div class="skill">
-            <p>HTML</p>
-            <div class="bar">
-              <span style="width: 90%"></span>
-            </div>
-          </div>
+        <a href="https://github.com/kwondo0" target="_blank"> GitHub </a>
+      </div>
+    </section>
 
-          <div class="skill">
-            <p>CSS</p>
-            <div class="bar">
-              <span style="width: 80%"></span>
-            </div>
-          </div>
+    <section id="about" class="fade">
+      <h2>About Me</h2>
 
-          <div class="skill">
-            <p>JavaScript</p>
-            <div class="bar">
-              <span style="width: 70%"></span>
-            </div>
-          </div>
+      <p>
+        안녕하세요. 정보보호학을 전공하고 있는 권도영입니다. 웹 개발과 사용자
+        경험에 관심이 있으며 실생활의 문제를 해결하는 서비스를 만드는 것을
+        좋아합니다.
+      </p>
+    </section>
 
-          <div class="skill">
-            <p>Python</p>
-            <div class="bar">
-              <span style="width: 65%"></span>
-            </div>
-          </div>
-        </section>
+    <section id="skills" class="fade">
+      <h2>Skills</h2>
 
-        <section id="projects" class="fade">
-          <h2>프로젝트</h2>
+      <div class="skills-grid">
+        <div class="skill-card">HTML5</div>
+        <div class="skill-card">CSS3</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Git</div>
+        <div class="skill-card">GitHub</div>
+        <div class="skill-card">Linux</div>
+      </div>
+    </section>
 
-          <div class="project-card">
-            <h3>개인 포트폴리오 웹사이트</h3>
-            <p>
-              HTML, CSS, JavaScript를 활용하여 제작한 개인 포트폴리오입니다.
-              반응형 웹 디자인과 스크롤 애니메이션을 적용했습니다.
-            </p>
-            <span>HTML · CSS · JavaScript</span>
-            <a
-              href="https://444-lt5t.vercel.app/"
-              target="_blank"
-              class="project-btn"
-            >
-              링크 보기
-            </a>
-          </div>
+    <section id="projects" class="fade">
+      <h2>Projects</h2>
 
-          <div class="project-card">
-            <h3>TimeSense</h3>
-            <p>
-              사용자가 시간의 흐름을 직관적으로 인지할 수 있도록 도와주는 웹
-              서비스입니다.
-            </p>
-            <span>HTML · CSS · JavaScript</span>
-            <a
-              href="https://team-nine-lake.vercel.app/"
-              target="_blank"
-              class="project-btn"
-            >
-              링크 보기
-            </a>
-          </div>
-        </section>
-        <section id="contact" class="fade">
-          <h2>연락</h2>
-          <p>📧 Email: example@email.com</p>
-          <p>💻 GitHub : github.com/kwondo0</p>
-          <p>📝 Blog : blog.naver.com/kwondo0-</p>
-        </section>
+      <div class="project-card">
+        <h3>TimeSense</h3>
+
+        <p>
+          사용자가 시간의 흐름을 직관적으로 인지할 수 있도록 도와주는
+          서비스입니다.
+        </p>
+
+        <span>HTML · CSS · JavaScript</span>
+
+        <a href="https://team-nine-lake.vercel.app/" class="project-btn">
+          자세히 보기
+        </a>
       </div>
 
-      <div class="sidebar">
-        <h2>권도영</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
 
-        <ul class="menu">
-          <li><a href="#about">소개</a></li>
-          <li><a href="#skills">기술 스택</a></li>
-          <li><a href="#projects">프로젝트</a></li>
-        </ul>
+        <p>
+          프로젝트와 기술 스택을 소개하기 위해 제작한 개인 포트폴리오
+          웹사이트입니다.
+        </p>
 
-        <div class="links">
-          <h3>링크</h3>
-          <a href="https://github.com/your-id" target="_blank">GitHub</a>
-          <a href="#">블로그</a>
-        </div>
+        <span>HTML · CSS · JavaScript</span>
 
-        <div class="contact">
-          <h3>연락처</h3>
-          <p>email@email.com</p>
-        </div>
+        <a
+          href="https://444-lt5t.vercel.app/"
+          target="_blank"
+          class="project-btn"
+        >
+          자세히 보기
+        </a>
       </div>
-    </div>
+    </section>
+
+    <section id="contact" class="fade">
+      <h2>Contact</h2>
+
+      <p>📧 이메일 입력</p>
+
+      <p>💻 GitHub : github.com/kwondo0</p>
+
+      <p>📝 Blog : blog.naver.com/kwondo0-</p>
+    </section>
+
     <button id="topBtn">↑</button>
+
     <script src="script.js"></script>
   </body>
 </html>

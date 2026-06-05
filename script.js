@@ -1,36 +1,34 @@
-const sections = document.querySelectorAll('section')
-const navLinks = document.querySelectorAll('.menu a')
+const text = '안녕하세요, 권도영입니다.'
+let index = 0
 
-window.addEventListener('scroll', () => {
-  let current = ''
+function typing() {
+  if (index < text.length) {
+    document.getElementById('typing').innerHTML += text.charAt(index)
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop
+    index++
 
-    if (scrollY >= sectionTop - 200) {
-      current = section.getAttribute('id')
-    }
-  })
+    setTimeout(typing, 100)
+  }
+}
 
-  navLinks.forEach((link) => {
-    link.classList.remove('active')
-
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active')
-    }
-  })
-})
+typing()
 
 const fades = document.querySelectorAll('.fade')
 
 window.addEventListener('scroll', () => {
   fades.forEach((item) => {
-    const itemTop = item.getBoundingClientRect().top
+    const top = item.getBoundingClientRect().top
 
-    if (itemTop < window.innerHeight - 100) {
+    if (top < window.innerHeight - 100) {
       item.classList.add('show')
     }
   })
+})
+
+const darkBtn = document.getElementById('darkBtn')
+
+darkBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark')
 })
 
 const topBtn = document.getElementById('topBtn')
@@ -40,30 +38,4 @@ topBtn.addEventListener('click', () => {
     top: 0,
     behavior: 'smooth',
   })
-})
-
-const text = '안녕하세요, 권도영입니다.'
-let index = 0
-
-function typing() {
-  if (index < text.length) {
-    document.getElementById('typing').innerHTML += text.charAt(index)
-    index++
-    setTimeout(typing, 100)
-  }
-}
-
-typing()
-
-window.addEventListener('scroll', () => {
-  const scroll =
-    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-
-  document.getElementById('progress').style.width = scroll + '%'
-})
-
-const darkBtn = document.getElementById('darkModeBtn')
-
-darkBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark')
 })
